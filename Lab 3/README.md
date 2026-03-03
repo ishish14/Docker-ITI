@@ -201,24 +201,7 @@ Test:
 ## Step 3: Add Nginx in Front
 Now extend `docker-compose.yml` to include Nginx:
 
-```yaml
-version: '3.8'
-
-services:
-  flask-app:
-    image: localhost:5000/iti-flask-lab2:latest
-    expose:
-      - "5000"
-
-  nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - flask-app
-```
+![](images/image55.png)
 
 ---
 
@@ -234,28 +217,21 @@ server {
     }
 }
 ```
+![](images/image56.png)
 
 - `proxy_pass` → forwards requests to the Flask container on port 5000.  
 - `flask-app` → service name resolved automatically by Docker Compose networking.  
 
 ---
 
-## 🛠 Step 5: Run and Test
+## Step 5: Run and Test
 Start the stack:
 
 ```bash
 docker compose up -d
 ```
 
-Check logs:
-
-```bash
-docker compose logs flask-app
-docker compose logs nginx
-```
-
 Test endpoints:
-- Direct Flask (before Nginx): `http://localhost:8080`  
-- Through Nginx (after adding Nginx): `http://localhost`  
 
+![](images/image57.png)
 --
