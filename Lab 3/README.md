@@ -93,4 +93,54 @@ This uploads the image to your local registry.
 ![](images/image4.png)
 ---
 
+# Part 2: WordPress + MySQL with Docker Compose
+
+This lab demonstrates how to:
+1. Run WordPress (`wordpress:latest`) with a MySQL (`mysql:5.7`) database using Docker Compose.
+2. Persist MySQL data on the host machine.
+3. Expose WordPress on port **8080**.
+
+---
+
+## Step 1: Create a Project Directory
+```bash
+mkdir wordpress-compose
+cd wordpress-compose
+```
+![](images/image01.png)
+---
+
+## Step 2: Write the `docker-compose.yml`
+
+![](images/image02.png)
+
+---
+
+## Step 3: Start the Application
+```bash
+docker compose up -d
+```
+
+- `up`: Starts the services.
+- `-d`: Detached mode (background).
+
+![](images/image03.png)
+Check running containers:
+```bash
+docker ps
+```
+![](images/image04.png)
+---
+
+## Step 4: Test the Setup
+1. Open a browser on your host machine.
+2. Navigate to:
+   ```
+   http://localhost:8080
+   ```
+
+![](images/image05.png)
+---
+
+
 
