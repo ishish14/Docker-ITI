@@ -116,6 +116,8 @@ cd wordpress-compose
     - wordpress couldn't access the database
     - when using mysql higher version as shown, wordpress accessed successfully
 
+You can view the full Compose configuration here: [docker-compose.yml](./Lab 3/1-docker-compose.yml)
+
 ![](images/image02.png)
 
 
