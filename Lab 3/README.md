@@ -182,6 +182,8 @@ The already built  Flask image in **Lab 2** was `iti-flask-lab2`.
 ## Step 2: Run Flask App with Compose (Before Nginx)
 Create `docker-compose.yml`:
 
+You can view the full Compose configuration here: [docker-compose.yml](./2-docker-compose.yml)
+
 ![](images/image52.png)
 
 - `ports: 8080:5000` → maps host port 8080 to container port 5000.  
@@ -202,6 +204,8 @@ Test:
 
 ## Step 3: Add Nginx in Front
 Now extend `docker-compose.yml` to include Nginx:
+
+You can view the full Compose configuration here: [docker-compose.yml](./3-docker-compose.yml)
 
 ![](images/image55.png)
 
