@@ -1,0 +1,6 @@
+services:
+  flask-app:
+    image: localhost:5000/flask-app:latest
+    ports:
+      - "8080:5000"
+
