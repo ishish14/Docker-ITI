@@ -1,4 +1,4 @@
-# Docker-ITI-Tasks submissions
+# Docker Tasks 
 
 ![](images/lab1.png)
 ![](images/lab2.png)
